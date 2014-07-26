@@ -18,9 +18,43 @@ board.on("ready", function() {
   var right_wheel = new five.Servo({ pin: 10, type: 'continuous'  }).stop();
 
 
-  process.stdin.resume(); 
-  process.stdin.setEncoding('utf8'); 
-  process.stdin.setRawMode(true); 
+  // Try to setup gamepad
+  var GamePad = require( 'node-gamepad' );
+  var controller = new GamePad( 'ps3/dualshock3' );
+  try {
+    controller.connect();
+
+    controller.on("dpadUp:press", function() {
+      left_wheel.ccw();
+      right_wheel.cw();
+    })
+
+    controller.on("dpadDown:press", function() {
+      left_wheel.cw();
+      right_wheel.ccw();
+    })
+
+    controller.on("dpadLeft:press", function() {
+      left_wheel.ccw();
+      right_wheel.ccw();
+    })
+
+    controller.on("dpadRight:press", function() {
+      left_wheel.cw();
+      right_wheel.cw();
+    })
+
+    controller.on("circle:press", function() {
+      left_wheel.stop();
+      right_wheel.stop();
+    })
+  } catch (ex) {
+    console.log(ex);
+  }
+
+  process.stdin.resume();
+  process.stdin.setEncoding('utf8');
+  process.stdin.setRawMode(true);
 
   process.stdin.on('keypress', function (ch, key) {
     

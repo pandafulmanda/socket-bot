@@ -16,8 +16,9 @@
     "url": "https://github.com/pandafulmanda/socket-bot/issues"
   },
   "dependencies": {
-    "johnny-five":"latest",
-    "keypress":"latest"
+    "johnny-five": "latest",
+    "keypress": "latest",
+    "node-gamepad": "~0.1.12"
   },
   "homepage": "https://github.com/pandafulmanda/socket-bot"
 }
