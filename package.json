@@ -1,0 +1,23 @@
+{
+  "name": "socket-bot",
+  "version": "0.0.0",
+  "description": "node bot over sockets?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pandafulmanda/socket-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandafulmanda/socket-bot/issues"
+  },
+  "dependencies": {
+    "johnny-five":"latest",
+    "keypress":"latest"
+  },
+  "homepage": "https://github.com/pandafulmanda/socket-bot"
+}
