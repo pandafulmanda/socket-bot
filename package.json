@@ -18,7 +18,8 @@
   "dependencies": {
     "johnny-five": "latest",
     "keypress": "latest",
-    "node-gamepad": "~0.1.12"
+    "node-gamepad": "~0.1.12",
+    "spark-io": "~0.5.1"
   },
   "homepage": "https://github.com/pandafulmanda/socket-bot"
 }
